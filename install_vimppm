@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ ! -e ~/.vimperator ]; then
+  mkdir ~/.vimperator
+fi
+cd ~/.vimperator
+mkdir vimppm; cd vimppm
+git clone git://github.com/cd01/vimppm
+

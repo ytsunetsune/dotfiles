@@ -1,0 +1,49 @@
+source ~/.vimperator/vimppm/vimppm/plugin/vimppm.js
+
+" plugins
+vimppm 'migemo-find.js'
+vimppm 'migemo_completion.js'
+vimppm 'migemo_hint.js'
+
+
+nmap J gt
+nmap K gT
+
+map j 4<C-e>
+map k 4<C-y>
+
+map <S-Right> :tabmove! +1<CR>
+map <S-Left> :tabmove! -1<CR>
+
+nmap <BS> <NOP>
+
+map <C-c> :echo Yank!<CR>Y
+
+nnoremap s :set<Space>cpt=s<CR>:tabopen<Space>google<Space>
+nnoremap e :set<Space>cpt=s<CR>:tabopen<Space>weblio<Space>
+nnoremap S :set<Space>cpt=H<CR>:hbsearch<Space>
+nnoremap t :set<Space>cpt=slt<CR>:tabopen<Space>
+nnoremap o :set<Space>cpt=slt<CR>:open<Space>
+
+set hintchars=ighfjdksla
+
+" Addon setting for Hateba Bookmark
+javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
+set complete+=H
+
+" hit-a-hint font setting
+highlight! Hint font-size: 12pt; background: red; color: white; border: 1px solid black; font-family: "Inconsolata",monaco,monospace;
+
+javascript <<EOM
+liberator.modules.commands.addUserCommand(["togglepin"], "add pin to current tab",
+function(){
+    var currentTab = gBrowser.mCurrentTab
+    if(currentTab.pinned){
+        gBrowser.unpinTab(currentTab)
+    }
+    else{
+        gBrowser.pinTab(currentTab)
+    }
+});
+EOM
+nnoremap @ :togglepin <CR>

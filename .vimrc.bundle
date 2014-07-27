@@ -1,0 +1,66 @@
+" ------------------------------------------------------------------------------
+" NeoBundleで管理しているプラグイン読み込み
+" ------------------------------------------------------------------------------
+
+filetype off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+  " Let NeoBundle manage NeoBundle
+  NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Edit {{{
+  " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
+  NeoBundle 'scrooloose/nerdcommenter.git' 
+
+  " surround.vim : テキストを括弧で囲む／削除する
+  NeoBundle 'tpope/vim-surround'
+
+  " vim-operator-user : 簡単にoperatorを定義できるようにする
+  NeoBundle 'operator-user'
+
+  " operator-replace : yankしたものでreplaceする
+  NeoBundle 'operator-replace'
+
+  " textobj-user : 簡単にVimエディタのテキストオブジェクトをつくれる
+  NeoBundle 'textobj-user'
+
+  " vim-textobj-entire : buffer全体をtext-objectに
+  NeoBundle 'textobj-entire'
+
+  " vim-textobj-multiblock：カッコ系をまとめてib, abで扱う
+  NeoBundle 'osyo-manga/vim-textobj-multiblock'
+
+  " vim-textobj-space：空白文字をtext-objectに
+  NeoBundle 'saihoooooooo/vim-textobj-space'
+
+  " vim-textobj-line：行全体をtext-objectに
+  NeoBundle 'kana/vim-textobj-line'
+
+  " マルチバイト対応の整形
+  NeoBundle 'h1mesuke/vim-alignta'
+
+  " Undo履歴を追える (need python support)
+  NeoBundle 'Gundo'
+" }}}
+
+" Programming {{{
+  " vim-fugitive：vimからgit操作をできるようにする
+  NeoBundle 'tpope/vim-fugitive'
+
+" }}}
+
+" ColorScheme{{{{
+  NeoBundle 'altercation/vim-colors-solarized'
+  NeoBundle 'tomasr/molokai'
+" }}}
+
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
