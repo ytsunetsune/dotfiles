@@ -46,7 +46,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " マルチバイト対応の整形
   NeoBundle 'h1mesuke/vim-alignta'
 
-  " Undo履歴を追える (need python support)
+  " Gundo：Undo履歴を追える (need python support)
   NeoBundle 'Gundo'
 " }}}
 

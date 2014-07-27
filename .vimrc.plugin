@@ -1,0 +1,9 @@
+" ------------------------------------------------------------------------------
+" NeoBundleで管理しているプラグイン読み込み
+" ------------------------------------------------------------------------------
+
+" operator-replace : yankしたものでreplaceする
+nmap _ <Plug>(operator-replace)
+
+" Gundo：Undo履歴を追える (need python support)
+nnoremap <F3> :GundoToggle<CR>

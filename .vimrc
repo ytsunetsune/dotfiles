@@ -13,3 +13,5 @@ source ~/dotfiles/.vimrc.edit
 source ~/dotfiles/.vimrc.fold
 " 検索設定
 source ~/dotfiles/.vimrc.search
+" 各プラグインの設定
+source ~/dotfiles/.vimrc.plugin
