@@ -1,0 +1,10 @@
+[user]
+	name = tsuneoka
+	email = tsuneoka@mizuuchi.lab.tuat.ac.jp
+[color]
+  ui = auto
+[core]
+  editor = vim -c \"set fenc=utf-8\"
+[alias]
+  graphall = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+  graph    = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --date=short
