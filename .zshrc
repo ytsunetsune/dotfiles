@@ -302,3 +302,5 @@ alias emacs='emacs23 -nw'
 function agvim () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
+
+function gi() { curl http://www.gitignore.io/api/$@ ;}
