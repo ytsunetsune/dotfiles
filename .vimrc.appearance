@@ -28,5 +28,3 @@ highlight CursorLine ctermbg=black guibg=black
 " コマンド実行中は再描画しない
 set lazyredraw
 
-" lispモードのカッコを色分けする
-let g:lisp_rainbow=1
