@@ -81,6 +81,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " recognize_charcode：文字エンコーディングを自動判別
   NeoBundle 'banyan/recognize_charcode.vim'
+
+  " vim-altr：気持ちを読み取ってファイルを開く
+  NeoBundle 'kana/vim-altr'
 " }}}
 
 " ColorScheme{{{{
