@@ -78,6 +78,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-over：置換コマンドを可視化
   NeoBundle 'osyo-manga/vim-over'
+
+  " recognize_charcode：文字エンコーディングを自動判別
+  NeoBundle 'banyan/recognize_charcode.vim'
 " }}}
 
 " ColorScheme{{{{
