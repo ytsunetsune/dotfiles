@@ -7,3 +7,14 @@ nmap _ <Plug>(operator-replace)
 
 " Gundo：Undo履歴を追える (need python support)
 nnoremap <F3> :GundoToggle<CR>
+
+" vim-anzu：検索結果の個数表示
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+set statusline=%{anzu#search_status()}
+
+" vim-altr：気持ちを読み取ってファイルを開く
+nnoremap <F2>  <Plug>(altr-forward)

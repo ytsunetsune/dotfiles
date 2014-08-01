@@ -69,6 +69,23 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 " }}}
 
+" Utility {{{
+  " vim-anzu：検索結果の個数表示
+  NeoBundle 'osyo-manga/vim-anzu'
+
+  " lightline：ステータスラインをかっこ良くする
+  "NeoBundle 'itchyny/lightline.vim'
+
+  " vim-over：置換コマンドを可視化
+  NeoBundle 'osyo-manga/vim-over'
+
+  " recognize_charcode：文字エンコーディングを自動判別
+  NeoBundle 'banyan/recognize_charcode.vim'
+
+  " vim-altr：気持ちを読み取ってファイルを開く
+  NeoBundle 'kana/vim-altr'
+" }}}
+
 " ColorScheme{{{{
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'tomasr/molokai'

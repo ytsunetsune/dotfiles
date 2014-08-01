@@ -16,3 +16,4 @@ source ~/dotfiles/.vimrc.search
 " 各プラグインの設定
 source ~/dotfiles/.vimrc.plugin
 
+syntax on
