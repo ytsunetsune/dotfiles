@@ -84,6 +84,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-altr：気持ちを読み取ってファイルを開く
   NeoBundle 'kana/vim-altr'
+
+  " gist-vim：Gistsをvimから使う
+  NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 " }}}
 
 " ColorScheme{{{{

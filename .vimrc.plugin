@@ -18,3 +18,9 @@ set statusline=%{anzu#search_status()}
 
 " vim-altr：気持ちを読み取ってファイルを開く
 nnoremap <F2>  <Plug>(altr-forward)
+
+" gist-vim：Gistsをvimから使う
+let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
