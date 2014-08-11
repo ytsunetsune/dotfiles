@@ -67,6 +67,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " slimv：vimでlisp開発
   NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
+  " jedi-vim：python開発
+  NeoBundleLazy 'davidhalter/jedi-vim', {
+        \ "autoload": {
+        \   "filetypes": ["python", "python3", "djangohtml"],
+        \ },
+        \ "build": {
+        \   "unix": "pip install jedi",
+        \ }}
 " }}}
 
 " Utility {{{
@@ -92,6 +101,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " ColorScheme{{{{
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'tomasr/molokai'
+  NeoBundle 'w0ng/vim-hybrid'
 " }}}
 
 call neobundle#end()
