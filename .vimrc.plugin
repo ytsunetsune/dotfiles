@@ -3,8 +3,7 @@
 " ------------------------------------------------------------------------------
 
 " operator-replace : yankしたものでreplaceする
-nmap _ <Plug>(operator-replace)
-
+nmap _ <Plug>(operator-replace) 
 " Gundo：Undo履歴を追える (need python support)
 nnoremap <F3> :GundoToggle<CR>
 
@@ -33,3 +32,24 @@ let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_select_first = 0
 " quickrunと被るため大文字に変更
 let g:jedi#rename_command = '<Leader>R'
+
+" vim-textobj-multiblock：カッコ系をまとめてib, abで扱う
+omap ab <Plug>(textobj-multiblock-a)
+omap ib <Plug>(textobj-multiblock-i)
+vmap ab <Plug>(textobj-multiblock-a)
+vmap ib <Plug>(textobj-multiblock-i)
+
+" committia.vim：gitコミットログサポート
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+  setlocal spell
+  " if nocommit message, start with insert mode
+  if a:info.vcs ==# 'git' && getline(1) ==# ''
+    startinsert
+  end
+  " Scroll the diff window from insert mode
+  " Map <C-n> and <C-p>
+  imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
+  imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
+endfunction
+

@@ -65,6 +65,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-fugitive：vimからgit操作をできるようにする
   NeoBundle 'tpope/vim-fugitive'
 
+  " gitv：vimからgitk的なことをやる
+  NeoBundle 'gregsexton/gitv'
+
+  " committia.vim：gitコミットログサポート
+  NeoBundle 'rhysd/committia.vim'
+
   " slimv：vimでlisp開発
   NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
