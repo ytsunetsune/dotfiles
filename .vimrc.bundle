@@ -59,6 +59,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " various langueages snippets
   NeoBundle 'honza/vim-snippets'
+  NeoBundle 'Shougo/neosnippet-snippets'
 " }}}
 
 " Programming {{{
