@@ -15,5 +15,9 @@ source ~/dotfiles/.vimrc.fold
 source ~/dotfiles/.vimrc.search
 " 各プラグインの設定
 source ~/dotfiles/.vimrc.plugin
+" lisp設定
+source ~/dotfiles/.vimrc.lisp
+" ラインの設定
+source ~/dotfiles/.vimrc.lightline
 
 syntax on
