@@ -43,8 +43,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-textobj-line：行全体をtext-objectに
   NeoBundle 'kana/vim-textobj-line'
 
-  " マルチバイト対応の整形
-  NeoBundle 'h1mesuke/vim-alignta'
+  " vim-easy-align：整形
+  NeoBundle 'junegunn/vim-easy-align'
 
   " Gundo：Undo履歴を追える (need python support)
   NeoBundle 'Gundo'
@@ -81,6 +81,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
         \ },
         \ "build": {
         \   "unix": "pip install jedi",
+        \ }}
+
+  " clang-format：clang-formatを使ってC系のコードを整形する
+  NeoBundleLazy 'rhysd/vim-clang-format', {
+        \ "autoload": {
+        \   "filetypes": ["c", "cpp"]
         \ }}
 " }}}
 
