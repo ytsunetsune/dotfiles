@@ -3,7 +3,7 @@
 " ------------------------------------------------------------------------------
 
 " operator-replace : yankしたものでreplaceする
-nnoremap _ <Plug>(operator-replace)
+map R <Plug>(operator-replace)
 " Gundo：Undo履歴を追える (need python support)
 nnoremap <F3> :GundoToggle<CR>
 

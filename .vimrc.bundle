@@ -23,10 +23,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tpope/vim-surround'
 
   " vim-operator-user : 簡単にoperatorを定義できるようにする
-  NeoBundle 'operator-user'
+  NeoBundle 'kana/vim-operator-user'
 
   " operator-replace : yankしたものでreplaceする
-  NeoBundle 'operator-replace'
+  NeoBundle 'kana/vim-operator-replace'
 
   " textobj-user : 簡単にVimエディタのテキストオブジェクトをつくれる
   NeoBundle 'textobj-user'
@@ -59,6 +59,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " various langueages snippets
   NeoBundle 'honza/vim-snippets'
+  NeoBundle 'Shougo/neosnippet-snippets'
 " }}}
 
 " Programming {{{
@@ -95,7 +96,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'osyo-manga/vim-anzu'
 
   " lightline：ステータスラインをかっこ良くする
-  "NeoBundle 'itchyny/lightline.vim'
+  NeoBundle 'itchyny/lightline.vim'
 
   " vim-over：置換コマンドを可視化
   NeoBundle 'osyo-manga/vim-over'
