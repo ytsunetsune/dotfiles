@@ -76,7 +76,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'rhysd/committia.vim'
 
   " slimv：vimでlisp開発
-  NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+  "NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
+  " vim-slime：vim上のテキストをscreen/tmuxセッションに送る
+  NeoBundle 'jpalardy/vim-slime'
 
   " jedi-vim：python開発
   NeoBundleLazy 'davidhalter/jedi-vim', {

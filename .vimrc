@@ -19,5 +19,7 @@ source ~/dotfiles/.vimrc.plugin
 source ~/dotfiles/.vimrc.lisp
 " ラインの設定
 source ~/dotfiles/.vimrc.lightline
+" vim-slimeの設定
+source ~/dotfiles/.vimrc.slime
 
 syntax on
