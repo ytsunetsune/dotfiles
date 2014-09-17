@@ -46,6 +46,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-easy-align：整形
   NeoBundle 'junegunn/vim-easy-align'
 
+  " alignta：整形
+  NeoBundle 'h1mesuke/vim-alignta'
+
   " Gundo：Undo履歴を追える (need python support)
   NeoBundle 'Gundo'
 " }}}
