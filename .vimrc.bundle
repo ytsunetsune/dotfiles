@@ -22,6 +22,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'tpope/vim-surround'
 
+  " repeat.vim：surround.vimなどを"."で繰り返し出来るようにする
+  NeoBundle 'tpope/vim-repeat'
+
   " vim-operator-user : 簡単にoperatorを定義できるようにする
   NeoBundle 'kana/vim-operator-user'
 
