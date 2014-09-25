@@ -21,5 +21,7 @@ source ~/dotfiles/.vimrc.lisp
 source ~/dotfiles/.vimrc.lightline
 " vim-slimeの設定
 source ~/dotfiles/.vimrc.slime
+" ファイルタイプなどの設定
+source ~/dotfiles/.vimrc.file
 
 syntax on
