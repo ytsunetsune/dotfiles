@@ -104,6 +104,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
         \ "autoload": {
         \   "filetypes": ["c", "cpp"]
         \ }}
+
+  " vim-markdown：markdownのシンタックスハイライト
+  NeoBundle 'plasticboy/vim-markdown'
 " }}}
 
 " Utility {{{
