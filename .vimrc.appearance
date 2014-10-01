@@ -35,3 +35,4 @@ set t_Co=256
 " カラースキームの設定
 colorscheme solarized
 set background=dark
+let g:solarized_termtrans=1
