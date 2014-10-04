@@ -7,7 +7,7 @@ set smartindent " 新しい行を開始したときに、新しい行のイン�
 set cindent " Cプログラムファイルの自動インデントを始める
 
 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
-set tabstop=2 shiftwidth=2 softtabstop=0
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 if has("autocmd")
   "ファイルタイプの検索を有効にする
