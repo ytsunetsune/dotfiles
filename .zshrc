@@ -304,3 +304,5 @@ function agvim () {
 }
 
 function gi() { curl http://www.gitignore.io/api/$@ ;}
+
+function todo() { ag -i todo: $@ ;}
