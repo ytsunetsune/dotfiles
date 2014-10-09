@@ -293,7 +293,7 @@ alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-character-ma
 alias al='ag --pager "less -R"'
 
 # vimpager
-export PAGER=~/.local/bin/vimpager
+export PAGER=vimpager
 alias less=$PAGER
 alias zless=$PAGER
 
