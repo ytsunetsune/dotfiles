@@ -127,6 +127,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " gist-vim：Gistsをvimから使う
   NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
+
+  " vim-quickhl：キーワードをハイライトする
+  NeoBundle 't9md/vim-quickhl'
 " }}}
 
 " ColorScheme{{{{
