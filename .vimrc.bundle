@@ -130,6 +130,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-quickhl：キーワードをハイライトする
   NeoBundle 't9md/vim-quickhl'
+
+  " ag.vim：vimから検索コマンドagを使う
+  NeoBundle 'rking/ag.vim'
 " }}}
 
 " ColorScheme{{{{
