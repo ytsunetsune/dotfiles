@@ -70,3 +70,11 @@ xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
 
+" diffchar.vim：単語単位でvimdiff
+" vimdiffで起動した際自動的に単語単位の差分(diffchar.vim)を有効にする
+if &diff
+  augroup enable_diffchar
+    autocmd!
+    autocmd VimEnter * execute "%SDChar"
+  augroup END
+endif

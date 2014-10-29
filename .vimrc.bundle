@@ -133,6 +133,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " ag.vim：vimから検索コマンドagを使う
   NeoBundle 'rking/ag.vim'
+
+  " diffchar.vim：単語単位でvimdiff
+  NeoBundle 'vim-scripts/diffchar.vim'
 " }}}
 
 " ColorScheme{{{{
