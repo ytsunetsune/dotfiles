@@ -10,6 +10,7 @@
   graph    = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --date=short
 	dt = difftool
 	mt = mergetool
+  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 [github]
 	user = ytsunetsune
 [diff]
