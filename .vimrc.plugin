@@ -85,7 +85,7 @@ vmap <silent> <C-c><C-c> :VimShellSendString<CR>
 nnoremap <silent> <C-c><C-c> <S-v>:VimShellSendString<CR>
 augroup vim_eus
   autocmd!
-  au BufNewFile,BufRead *.l nnoremap <buffer> <silent> <C-c><C-c> <S-v>:VimShellSendString<CR>
+  au BufNewFile,BufRead *.l nnoremap <buffer> <silent> <C-c><C-c> vab:VimShellSendString<CR>
 augroup END
 
 " Unite.vim：統合UI
