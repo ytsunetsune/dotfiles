@@ -84,12 +84,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " committia.vim：gitコミットログサポート
   NeoBundle 'rhysd/committia.vim'
 
-  " slimv：vimでlisp開発
-  "NeoBundle 'https://bitbucket.org/kovisoft/slimv'
-
-  " vim-slime：vim上のテキストをscreen/tmuxセッションに送る
-  NeoBundle 'jpalardy/vim-slime'
-
   " jedi-vim：python開発
   NeoBundleLazy 'davidhalter/jedi-vim', {
         \ "autoload": {
@@ -107,6 +101,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-markdown：markdownのシンタックスハイライト
   NeoBundle 'plasticboy/vim-markdown'
+
+  " vim-pukiwiki-syntax：pukiwikiのシンタックスハイライト
+  NeoBundle 'ytsunetsune/vim-pukiwiki-syntax'
+
+  " vim-niji：lisp系の言語でかっこを色付けする
+  NeoBundle 'amdt/vim-niji'
+
+  " unite-outline-euslisp：euslispの定義文をアウトライン化
+  NeoBundle 'ytsunetsune/unite-outline-euslisp'
 " }}}
 
 " Utility {{{
@@ -138,7 +141,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'vim-scripts/diffchar.vim'
 " }}}
 
-" ColorScheme{{{{
+" ColorScheme{{{
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'tomasr/molokai'
   NeoBundle 'w0ng/vim-hybrid'
@@ -154,6 +157,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     \   'unix' : 'make -f make_unix.mak',
     \ },
     \ }
+
+  " Unite.vim：統合UI
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'Shougo/unite-outline'
+  NeoBundle 'tacroe/unite-mark'
 
   " vimshell：vim内で使えるshell
   NeoBundle 'Shougo/vimshell'

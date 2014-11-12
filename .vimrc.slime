@@ -1,9 +1,0 @@
-" ------------------------------------------------------------------------------
-" vim-slimeの設定
-" ------------------------------------------------------------------------------
-
-let g:slime_target = "tmux"
-let g:slime_paste_file = "$HOME/.slime_paste"
-
-nnoremap <silent> <C-c><C-c> vab:SlimeSend<CR>
-

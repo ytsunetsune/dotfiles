@@ -1,8 +1,6 @@
 " ------------------------------------------------------------------------------
 " NeoBundleで管理しているプラグイン読み込み
-" ------------------------------------------------------------------------------
-
-" operator-replace : yankしたものでreplaceする
+" ------------------------------------------------------------------------------ " operator-replace : yankしたものでreplaceする
 map R <Plug>(operator-replace)
 " Gundo：Undo履歴を追える (need python support)
 nnoremap <F3> :GundoToggle<CR>
@@ -78,3 +76,40 @@ if &diff
     autocmd VimEnter * execute "%SDChar"
   augroup END
 endif
+
+" vimshell：vim内で使えるshell
+nnoremap <silent> ,is :VimShell<CR>
+nnoremap <silent> ,iel :VimShellInteractive jskrbeusgl<CR>
+nnoremap <silent> ,ipy :VimShellInteractive python<CR>
+vmap <silent> <C-c><C-c> :VimShellSendString<CR>
+nnoremap <silent> <C-c><C-c> <S-v>:VimShellSendString<CR>
+augroup vim_eus
+  autocmd!
+  au BufNewFile,BufRead *.l nnoremap <buffer> <silent> <C-c><C-c> <S-v>:VimShellSendString<CR>
+augroup END
+
+" Unite.vim：統合UI
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,uF :<C-u>Unite neomru/file<CR>
+nnoremap <silent> ,un :<C-u>Unite file/new <CR>
+nnoremap <silent> ,ud :<C-u>Unite directory<CR>
+nnoremap <silent> ,uD :<C-u>Unite neomru/directory <CR>
+nnoremap <silent> ,uo :<C-u>Unite outline<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uu :<C-u>Unite buffer neomru/file<CR>
+nnoremap <silent> ,uU :<C-u>UniteWithBufferDir -buffer-name=files buffer neomru/file file<CR>
+nnoremap <silent> ,um :<C-u>Unite mark<CR>
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+
+augroup unite_openclose
+  autocmd!
+  " ウィンドウを分割して開く
+  au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+  au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+  " ウィンドウを縦に分割して開く
+  au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+  au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+  " ESCキーを2回押すと終了する
+  au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
+  au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+augroup END
