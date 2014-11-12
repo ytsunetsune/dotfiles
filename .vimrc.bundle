@@ -145,6 +145,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " }}}
 
 " Environment {{{
+  " vimproc：vimで非同期処理
   NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
     \   'windows' : 'make -f make_mingw32.mak',
@@ -153,6 +154,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     \   'unix' : 'make -f make_unix.mak',
     \ },
     \ }
+
+  " vimshell：vim内で使えるshell
+  NeoBundle 'Shougo/vimshell'
 " }}}
 
 call neobundle#end()
