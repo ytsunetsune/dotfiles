@@ -78,6 +78,9 @@ if &diff
 endif
 
 " vimshell：vim内で使えるshell
+let g:vimshell_prompt_expr =
+      \ 'escape(fnamemodify(getcwd(), ":~")."$", "\\[]()?! ")." "'
+let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+$ '
 nnoremap <silent> ,is :VimShell<CR>
 nnoremap <silent> ,iel :VimShellInteractive jskrbeusgl<CR>
 nnoremap <silent> ,ipy :VimShellInteractive python<CR>
