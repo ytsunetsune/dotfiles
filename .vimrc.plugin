@@ -82,6 +82,7 @@ let g:vimshell_prompt_expr =
       \ 'escape(fnamemodify(getcwd(), ":~")."$", "\\[]()?! ")." "'
 let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+$ '
 nnoremap <silent> ,is :VimShell<CR>
+nnoremap <silent> ,ip :VimShellPop<CR>
 nnoremap <silent> ,iel :VimShellInteractive jskrbeusgl<CR>
 nnoremap <silent> ,ipy :VimShellInteractive python<CR>
 vmap <silent> <C-c><C-c> :VimShellSendString<CR>
