@@ -27,3 +27,6 @@ alias gsdco='git svn dcommit'
 alias gslog='git svn log'
 alias gsclo='git svn clone'
 alias gsfet='git svn fetch'
+
+# lab
+alias jmanual='open ~/prog/euslisp/doc/jmanual.pdf'
