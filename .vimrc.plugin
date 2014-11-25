@@ -85,12 +85,6 @@ nnoremap <silent> ,is :VimShell<CR>
 nnoremap <silent> ,ip :VimShellPop<CR>
 nnoremap <silent> ,iel :VimShellInteractive jskrbeusgl<CR>
 nnoremap <silent> ,ipy :VimShellInteractive python<CR>
-vmap <silent> <C-c><C-c> :VimShellSendString<CR>
-nnoremap <silent> <C-c><C-c> <S-v>:VimShellSendString<CR>
-augroup vim_eus
-  autocmd!
-  au BufNewFile,BufRead *.l nnoremap <buffer> <silent> <C-c><C-c> vab:VimShellSendString<CR>
-augroup END
 
 " Unite.vim：統合UI
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
@@ -117,3 +111,9 @@ augroup unite_openclose
   au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
   au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 augroup END
+
+" vim-slime：vim上のテキストをscreen/tmuxセッションに送る
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+vmap <silent> <C-c><C-c> :SlimeSend<CR>
+nnoremap <silent> <C-c><C-c> <S-v>:SlimeSend<CR>

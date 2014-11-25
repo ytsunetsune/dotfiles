@@ -84,6 +84,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " committia.vim：gitコミットログサポート
   NeoBundle 'rhysd/committia.vim'
 
+  " vim-slime：vim上のテキストをscreen/tmuxセッションに送る
+  NeoBundle 'jpalardy/vim-slime'
+
   " jedi-vim：python開発
   NeoBundleLazy 'davidhalter/jedi-vim', {
         \ "autoload": {
