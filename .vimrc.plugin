@@ -98,6 +98,7 @@ nnoremap <silent> ,uu :<C-u>Unite buffer neomru/file<CR>
 nnoremap <silent> ,uU :<C-u>UniteWithBufferDir -buffer-name=files buffer neomru/file file<CR>
 nnoremap <silent> ,um :<C-u>Unite mark<CR>
 nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> ,ut :<C-u>Unite tweetvim<CR>
 
 augroup unite_openclose
   autocmd!
