@@ -171,6 +171,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'Shougo/vimshell'
 " }}}
 
+" TweetVim {{{
+  NeoBundle 'basyura/TweetVim'
+  NeoBundle 'mattn/webapi-vim'
+  NeoBundle 'basyura/twibill.vim'
+  NeoBundle 'tyru/open-browser.vim'
+  NeoBundle 'h1mesuke/unite-outline'
+  NeoBundle 'basyura/bitly.vim'
+" }}}
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
