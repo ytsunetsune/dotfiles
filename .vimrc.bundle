@@ -52,9 +52,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " alignta：整形
   NeoBundle 'h1mesuke/vim-alignta'
 
-  " Gundo：Undo履歴を追える (need python support)
-  NeoBundle 'Gundo'
-
   " abolish.vim：強化版置換コマンドSubvert
   NeoBundle 'tpope/vim-abolish'
 
@@ -86,21 +83,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-slime：vim上のテキストをscreen/tmuxセッションに送る
   NeoBundle 'jpalardy/vim-slime'
-
-  " jedi-vim：python開発
-  NeoBundleLazy 'davidhalter/jedi-vim', {
-        \ "autoload": {
-        \   "filetypes": ["python", "python3", "djangohtml"],
-        \ },
-        \ "build": {
-        \   "unix": "pip install jedi",
-        \ }}
-
-  " clang-format：clang-formatを使ってC系のコードを整形する
-  NeoBundleLazy 'rhysd/vim-clang-format', {
-        \ "autoload": {
-        \   "filetypes": ["c", "cpp"]
-        \ }}
 
   " vim-markdown：markdownのシンタックスハイライト
   NeoBundle 'plasticboy/vim-markdown'
@@ -169,14 +151,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vimshell：vim内で使えるshell
   NeoBundle 'Shougo/vimshell'
-" }}}
-
-" TweetVim {{{
-  NeoBundle 'basyura/TweetVim'
-  NeoBundle 'mattn/webapi-vim'
-  NeoBundle 'basyura/twibill.vim'
-  NeoBundle 'tyru/open-browser.vim'
-  NeoBundle 'basyura/bitly.vim'
 " }}}
 
 call neobundle#end()

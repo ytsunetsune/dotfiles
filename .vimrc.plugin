@@ -2,8 +2,6 @@
 " NeoBundleで管理しているプラグイン読み込み
 " ------------------------------------------------------------------------------ " operator-replace : yankしたものでreplaceする
 map R <Plug>(operator-replace)
-" Gundo：Undo履歴を追える (need python support)
-nnoremap <F3> :GundoToggle<CR>
 
 " vim-anzu：検索結果の個数表示
 nmap n <Plug>(anzu-n-with-echo)
@@ -21,11 +19,6 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
-
-" jedi-vim：python開発
-let g:jedi#auto_initialization = 1
-let g:jedi#popup_on_dot = 0
-autocmd  FileType python let b:did_ftplugin = 1"
 
 " vim-textobj-multiblock：カッコ系をまとめてib, abで扱う
 omap ab <Plug>(textobj-multiblock-a)
@@ -46,15 +39,6 @@ function! g:committia_hooks.edit_open(info)
   imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
   imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
-
-" clang-format：clang-formatを使ってC系のコードを整形する
-let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "AllowShortIfStatementsOnASingleLine" : "true",
-            \ "AlwaysBreakTemplateDeclarations" : "true",
-            \ "Standard" : "C++11",
-            \ "BreakBeforeBraces" : "Stroustrup",
-            \ }
 
 " vim-easy-align：整形
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
@@ -98,7 +82,6 @@ nnoremap <silent> ,uu :<C-u>Unite buffer neomru/file<CR>
 nnoremap <silent> ,uU :<C-u>UniteWithBufferDir -buffer-name=files buffer neomru/file file<CR>
 nnoremap <silent> ,um :<C-u>Unite mark<CR>
 nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
-nnoremap <silent> ,ut :<C-u>Unite tweetvim<CR>
 
 augroup unite_openclose
   autocmd!
