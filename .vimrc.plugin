@@ -118,3 +118,8 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 vmap <silent> <C-c><C-c> :SlimeSend<CR>
 nnoremap <silent> <C-c><C-c> <S-v>:SlimeSend<CR>
+
+" TweetVim
+let g:tweetvim_display_icon = 1
+let g:tweetvim_tweet_per_page = 60
+nnoremap <silent> ,S :<C-u>TweetVimSay<CR>
