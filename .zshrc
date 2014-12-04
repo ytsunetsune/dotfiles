@@ -306,3 +306,7 @@ function agvim () {
 function gi() { curl http://www.gitignore.io/api/$@ ;}
 
 function todo() { ag -i todo: $@ ;}
+
+export NVM_DIR="/home/tsuneoka/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm use stable
