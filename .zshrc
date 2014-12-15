@@ -197,7 +197,7 @@ alias gvim='vim -g'
 # my aliases
 case ${OSTYPE} in
   linux*)
-    alias open='gnome-open'
+    alias open='xdg-open'
     ;;
   cygwin*)
     alias open='cygstart'
