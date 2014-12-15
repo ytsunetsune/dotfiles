@@ -294,10 +294,7 @@ alias al='ag --pager "less -R"'
 
 # vimpager
 export PAGER=vimpager
-alias less=$PAGER
-alias zless=$PAGER
-
-alias emacs='emacs23 -nw'
+alias emacs='emacs -nw'
 
 function agvim () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
