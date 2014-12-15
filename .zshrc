@@ -293,7 +293,12 @@ alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-character-ma
 alias al='ag --pager "less -R"'
 
 # vimpager
-export PAGER=vimpager
+if type vimpager > /dev/null 2>&1; then
+    export PAGER=vimpager
+else
+    export PAGER=less
+fi
+alias vp=vimpager
 alias emacs='emacs -nw'
 
 function agvim () {
