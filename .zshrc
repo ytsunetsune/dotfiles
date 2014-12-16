@@ -293,11 +293,13 @@ alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-character-ma
 alias al='ag --pager "less -R"'
 
 # vimpager
-export PAGER=vimpager
-alias less=$PAGER
-alias zless=$PAGER
-
-alias emacs='emacs23 -nw'
+if type vimpager > /dev/null 2>&1; then
+    export PAGER=vimpager
+else
+    export PAGER=less
+fi
+alias vp=vimpager
+alias emacs='emacs -nw'
 
 function agvim () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
