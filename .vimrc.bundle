@@ -46,6 +46,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-textobj-line：行全体をtext-objectに
   NeoBundle 'kana/vim-textobj-line'
 
+  " vim-textobj-between：任意の文字で囲まれた範囲をtext-objectに
+  NeoBundle 'thinca/vim-textobj-between'
+
   " vim-easy-align：整形
   NeoBundle 'junegunn/vim-easy-align'
 
