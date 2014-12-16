@@ -119,6 +119,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-anzu：検索結果の個数表示
   NeoBundle 'osyo-manga/vim-anzu'
 
+  " incsearch.vim：検索を便利に
+  NeoBundle 'haya14busa/incsearch.vim'
+
   " lightline：ステータスラインをかっこ良くする
   NeoBundle 'itchyny/lightline.vim'
 
