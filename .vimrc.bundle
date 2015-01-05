@@ -175,6 +175,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vimshell：vim内で使えるshell
   NeoBundle 'Shougo/vimshell'
+
+  " dispatch.vim：非同期処理
+  NeoBundle 'tpope/vim-dispatch'
 " }}}
 
 " TweetVim {{{
