@@ -1,6 +1,11 @@
-!
-! CapsLockをCtrlに変更
-!
-remove Lock = Caps_Lock
-keysym Caps_Lock = Control_L
-add Control = Control_L
+! Caps_LockとControlを入れ替え
+!remove Lock = Caps_Lock
+!keysym Caps_Lock = Control_L
+!add Control = Control_L
+
+! 無変換＋HJKL
+keycode 102 = Mode_switch
+keycode 43 = h H Left Left
+keycode 44 = j J Down Down
+keycode 45 = k K Up Up
+keycode 46 = l L Right Right

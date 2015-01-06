@@ -46,6 +46,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-textobj-line：行全体をtext-objectに
   NeoBundle 'kana/vim-textobj-line'
 
+  " vim-textobj-between：任意の文字で囲まれた範囲をtext-objectに
+  NeoBundle 'thinca/vim-textobj-between'
+
   " vim-easy-align：整形
   NeoBundle 'junegunn/vim-easy-align'
 
@@ -119,6 +122,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-anzu：検索結果の個数表示
   NeoBundle 'osyo-manga/vim-anzu'
 
+  " incsearch.vim：検索を便利に
+  NeoBundle 'haya14busa/incsearch.vim'
+
   " lightline：ステータスラインをかっこ良くする
   NeoBundle 'itchyny/lightline.vim'
 
@@ -169,6 +175,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vimshell：vim内で使えるshell
   NeoBundle 'Shougo/vimshell'
+
+  " dispatch.vim：非同期処理
+  NeoBundle 'tpope/vim-dispatch'
 " }}}
 
 " TweetVim {{{
