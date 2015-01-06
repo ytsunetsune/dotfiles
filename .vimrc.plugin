@@ -138,3 +138,10 @@ nmap * <Plug>(incsearch-nohl-*)<Plug>(anzu-star-with-echo)
 nmap # <Plug>(incsearch-nohl-#)<Plug>(anzu-sharp-with-echo)
 nmap g* <Plug>(incsearch-nohl-g*)<Plug>(anzu-star-with-echo)
 nmap g# <Plug>(incsearch-nohl-g#)<Plug>(anzu-sharp-with-echo)
+
+" previm：markdownなどのプレビュー
+let g:previm_enable_realtime = 1
+augroup PrevimSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setf markdown
+augroup END

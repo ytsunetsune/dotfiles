@@ -108,6 +108,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-markdown：markdownのシンタックスハイライト
   NeoBundle 'plasticboy/vim-markdown'
 
+  " previm：markdownなどのリアルタイムプレビュー
+  NeoBundle 'kannokanno/previm'
+
   " vim-pukiwiki-syntax：pukiwikiのシンタックスハイライト
   NeoBundle 'ytsunetsune/vim-pukiwiki-syntax'
 
