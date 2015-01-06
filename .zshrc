@@ -305,8 +305,6 @@ function agvim () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
 
-function gi() { curl http://www.gitignore.io/api/$@ ;}
-
 function todo() { ag -i todo: $@ ;}
 
 export NVM_DIR="/home/tsuneoka/.nvm"
