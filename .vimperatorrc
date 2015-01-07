@@ -55,3 +55,7 @@ function(){
 });
 EOM
 nnoremap @ :togglepin <CR>
+
+" ~/.vimperatorrc.envにeditorなど環境依存の設定を書く
+" Windows例: set editor="C:\\\\vim74-kaoriya-win64\\\\gvim.exe\ -f"
+source ~/.vimperatorrc.env
