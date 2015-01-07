@@ -151,6 +151,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " diffchar.vim：単語単位でvimdiff
   NeoBundle 'vim-scripts/diffchar.vim'
+
+  " vim-migemo：migemo
+  NeoBundle 'haya14busa/vim-migemo'
 " }}}
 
 " ColorScheme{{{
