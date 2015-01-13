@@ -310,3 +310,5 @@ function todo() { ag -i todo: $@ ;}
 export NVM_DIR="/home/tsuneoka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm use stable
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
