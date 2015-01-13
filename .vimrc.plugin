@@ -145,3 +145,6 @@ augroup PrevimSettings
   autocmd!
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setf markdown
 augroup END
+
+" vim-migemo：migemo
+nnoremap // :Migemo<CR>
