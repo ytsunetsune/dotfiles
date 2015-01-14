@@ -1,0 +1,9 @@
+source ~/.antigen/antigen.zsh
+
+antigen-bundles <<EOBUNDLES
+autojump
+brew
+git
+pip
+zsh-users/zsh-syntax-highlighting
+EOBUNDLES

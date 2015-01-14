@@ -13,10 +13,10 @@ alias zmv='noglob zmv -W'
 #zshプロンプトにモード表示####################################
 function zle-line-init zle-keymap-select {
 case $KEYMAP in
-  vicmd)
-    PROMPT="%{$fg[red]%}[%{$reset_color%}%n@${HOST%%.*}/%{$fg_bold[red]%}NOR%{$reset_color%}%{$fg[red]%}]%#%{$reset_color%} " ;; main|viins)
-    PROMPT="%{$fg[red]%}[%{$reset_color%}%n@${HOST%%.*}/%{$fg_bold[cyan]%}INS%{$reset_color%}%{$fg[red]%}]%#%{$reset_color%} "
-    ;;
+    vicmd)
+        PROMPT="%{$fg[red]%}[%{$reset_color%}%n@${HOST%%.*}/%{$fg_bold[red]%}NOR%{$reset_color%}%{$fg[red]%}]%#%{$reset_color%} " ;; main|viins)
+        PROMPT="%{$fg[red]%}[%{$reset_color%}%n@${HOST%%.*}/%{$fg_bold[cyan]%}INS%{$reset_color%}%{$fg[red]%}]%#%{$reset_color%} "
+        ;;
 esac
 zle reset-prompt
 }
@@ -35,21 +35,21 @@ autoload -U colors; colors
 function rprompt-git-current-branch {
 local name st color
 if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
-  return
+    return
 fi
 name=$(basename "`git symbolic-ref HEAD 2> /dev/null`")
 if [[ -z $name ]]; then
-  return
+    return
 fi
 st=`git status 2> /dev/null`
 if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-  color=${fg[green]}
+    color=${fg[green]}
 elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-  color=${fg[yellow]}
+    color=${fg[yellow]}
 elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-  color=${fg_bold[red]}
+    color=${fg_bold[red]}
 else
-  color=${fg[red]}
+    color=${fg[red]}
 fi
 echo "%{$color%}$name%{$reset_color%} "
 }
@@ -133,14 +133,14 @@ setopt print_eight_bit
 setopt auto_cd
 ## cdr
 if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-  add-zsh-hook chpwd chpwd_recent_dirs
-  zstyle ':completion:*:*:cdr:*:*' menu selection
-  zstyle ':completion:*' recent-dirs-insert both
-  zstyle ':chpwd:*' recent-dirs-max 500
-  zstyle ':chpwd:*' recent-dirs-default true
-  zstyle ':chpwd:*' recent-dirs-file "${XDG_CACHE_HOME:-$HOME/.cache}/shell/chpwd-recent-dirs"
-  zstyle ':chpwd:*' recent-dirs-pushd true
+    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+    add-zsh-hook chpwd chpwd_recent_dirs
+    zstyle ':completion:*:*:cdr:*:*' menu selection
+    zstyle ':completion:*' recent-dirs-insert both
+    zstyle ':chpwd:*' recent-dirs-max 500
+    zstyle ':chpwd:*' recent-dirs-default true
+    zstyle ':chpwd:*' recent-dirs-file "${XDG_CACHE_HOME:-$HOME/.cache}/shell/chpwd-recent-dirs"
+    zstyle ':chpwd:*' recent-dirs-pushd true
 fi
 
 ## 小文字の場合大文字も候補に含める
@@ -153,20 +153,20 @@ setopt brace_ccl
 #setopt interactive_comments
 # PAGER
 if type lv > /dev/null 2>&1; then
-  ## lvを優先する。
-  export PAGER="lv"
+    ## lvを優先する。
+    export PAGER="lv"
 else
-  ## lvがなかったらlessを使う。
-  export PAGER="less"
+    ## lvがなかったらlessを使う。
+    export PAGER="less"
 fi
 if [ "$PAGER" = "lv" ]; then
-  ## -c: ANSIエスケープシーケンスの色付けなどを有効にする。
-  ## -l: 1行が長くと折り返されていても1行として扱う。
-  ## （コピーしたときに余計な改行を入れない。）
-  export LV="-c -l"
+    ## -c: ANSIエスケープシーケンスの色付けなどを有効にする。
+    ## -l: 1行が長くと折り返されていても1行として扱う。
+    ## （コピーしたときに余計な改行を入れない。）
+    export LV="-c -l"
 else
-  ## lvがなくてもlvでページャーを起動する。
-  alias lv="$PAGER"
+    ## lvがなくてもlvでページャーを起動する。
+    alias lv="$PAGER"
 fi
 # global aliases
 alias -g T="| tee"
@@ -178,13 +178,13 @@ alias -g Z="| tail"
 # 以下は.bashrcと共用
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
-  #alias dir='dir --color=auto'
-  #alias vdir='vdir --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 # some more ls aliases
 alias ll='ls -alF'
@@ -196,12 +196,12 @@ alias vim='vim'
 alias gvim='vim -g'
 # my aliases
 case ${OSTYPE} in
-  linux*)
-    alias open='gnome-open'
-    ;;
-  cygwin*)
-    alias open='cygstart'
-    ;;
+    linux*)
+        alias open='gnome-open'
+        ;;
+    cygwin*)
+        alias open='cygstart'
+        ;;
 esac
 
 alias open.='open .'
@@ -248,9 +248,9 @@ export EDITOR=vim
 
 
 show_buffer_stack() {
-  POSTDISPLAY="
-  stack: $LBUFFER"
-  zle push-line-or-edit
+    POSTDISPLAY="
+    stack: $LBUFFER"
+    zle push-line-or-edit
 }
 zle -N show_buffer_stack
 setopt noflowcontrol
@@ -258,33 +258,15 @@ bindkey '^Q' show_buffer_stack
 
 
 if [[ -f ~/.my-settings; ]]; then
-  . ~/.my-settings;
+    . ~/.my-settings;
 fi
 
-# 1st arg = plugin directory name
-# 2nd arg = plugin name
-# 3rd arg = source url
-function installplugin(){
-  if [[ -f ~/.zsh/$1/$2; ]]; then
-    source ~/.zsh/$1/$2;
-  else
-    if ! [[ -d ~/.zsh/; ]]; then
-      mkdir ~/.zsh
-    fi
-    git clone $3 $HOME/.zsh/$1/
-    if [[ -f ~/.zsh/$1/$2; ]]; then
-      source ~/.zsh/$1/$2;
-    fi
-  fi
-}
-
-installplugin z z.sh https://github.com/rupa/z.git
-installplugin zaw zaw.zsh git://github.com/zsh-users/zaw.git
-bindkey '^xa' zaw-applications
-bindkey '^xd' zaw-cdr
-bindkey '^xf' zaw-open-file
-bindkey '^xh' zaw-history
-fpath=(~/.zsh/zsh-completions $fpath)
+if [[ -f ~/.antigen/antigen.zsh; ]]; then
+    source ~/dotfiles/.zshrc.antigen;
+else
+    git clone https://github.com/zsh-users/antigen.git ~/.antigen;
+    source ~/dotfiles/.zshrc.antigen;
+fi
 
 alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
 alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-character-map.png "[$?] $(alert_helper) finished."'
@@ -302,7 +284,7 @@ alias vp=vimpager
 alias emacs='emacs -nw'
 
 function agvim () {
-  vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
+vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
 
 function todo() { ag -i todo: $@ ;}
@@ -311,4 +293,3 @@ export NVM_DIR="/home/tsuneoka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm use stable
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
