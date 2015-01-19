@@ -5,6 +5,10 @@ vimppm 'migemo-find.js'
 vimppm 'migemo_completion.js'
 vimppm 'migemo_hint.js'
 
+qmark g https://www.google.co.jp/
+qmark q http://qiita.com/
+qmark w http://mizuuchi.lab.tuat.ac.jp/pukiwiki/
+qmark r https://mizuuchi.lab.tuat.ac.jp/gitbucket/
 
 nmap J gt
 nmap K gT
