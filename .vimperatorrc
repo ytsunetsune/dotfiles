@@ -18,6 +18,9 @@ nmap K gT
 map j 4<C-e>
 map k 4<C-y>
 
+cmap <C-n> <Tab>
+cmap <C-p> <S-Tab>
+
 map <S-Right> :tabmove! +1<CR>
 map <S-Left> :tabmove! -1<CR>
 
