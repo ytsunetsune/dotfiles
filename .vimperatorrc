@@ -12,19 +12,20 @@ qmark q http://qiita.com/
 qmark w http://mizuuchi.lab.tuat.ac.jp/pukiwiki/
 qmark r https://mizuuchi.lab.tuat.ac.jp/gitbucket/
 
-nmap J gt
-nmap K gT
-
 map j 4<C-e>
 map k 4<C-y>
+map <S-Right> :tabmove! +1<CR>
+map <S-Left> :tabmove! -1<CR>
+
+nmap J gt
+nmap K gT
+nmap <BS> <NOP>
 
 cmap <C-n> <Tab>
 cmap <C-p> <S-Tab>
 
-map <S-Right> :tabmove! +1<CR>
-map <S-Left> :tabmove! -1<CR>
-
-nmap <BS> <NOP>
+imap <C-f> <Right>
+imap <C-b> <Left>
 
 map <C-c> :echo Yank!<CR>Y
 
