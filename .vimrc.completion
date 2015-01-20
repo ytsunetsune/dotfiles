@@ -94,6 +94,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType lisp setlocal dictionary+=~/.dict/euslisp_*.dict
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
@@ -105,4 +106,3 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.go = '\h\w*\.\?'
 
-NeoComplCacheEnable

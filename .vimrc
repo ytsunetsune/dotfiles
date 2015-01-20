@@ -19,5 +19,7 @@ source ~/dotfiles/.vimrc.plugin
 source ~/dotfiles/.vimrc.lightline
 " ファイルタイプなどの設定
 source ~/dotfiles/.vimrc.file
+" 補完設定
+source ~/dotfiles/.vimrc.completion
 
 syntax on
