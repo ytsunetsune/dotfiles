@@ -6,5 +6,13 @@ git
 pip
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
+m4i/cdd
 EOBUNDLES
 
+autoload -Uz compinit
+compinit
+
+source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-m4i-SLASH-cdd.git/cdd
+chpwd() {
+    _cdd_chpwd
+}
