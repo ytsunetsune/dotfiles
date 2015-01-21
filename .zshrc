@@ -261,13 +261,6 @@ if [[ -f ~/.my-settings; ]]; then
     . ~/.my-settings;
 fi
 
-if [[ -f ~/.antigen/antigen.zsh; ]]; then
-    source ~/dotfiles/.zshrc.antigen;
-else
-    git clone https://github.com/zsh-users/antigen.git ~/.antigen;
-    source ~/dotfiles/.zshrc.antigen;
-fi
-
 alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
 alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-character-map.png "[$?] $(alert_helper) finished."'
 
@@ -289,7 +282,12 @@ vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 
 function todo() { ag -i todo: $@ ;}
 
-export NVM_DIR="/home/tsuneoka/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use stable
+if [[ -f ~/.nvm/nvm.sh; ]]; then
+    export NVM_DIR="/home/tsuneoka/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    nvm use stable
+fi
 
+if (which zprof > /dev/null); then
+    zprof | less
+fi
