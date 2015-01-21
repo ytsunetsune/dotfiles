@@ -282,6 +282,10 @@ vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 
 function todo() { ag -i todo: $@ ;}
 
+if [[ -f ~/.zshrc.plugin; ]]; then
+    source ~/.zshrc.plugin
+fi
+
 if [[ -f ~/.nvm/nvm.sh; ]]; then
     export NVM_DIR="/home/tsuneoka/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
