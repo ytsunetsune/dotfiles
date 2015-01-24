@@ -163,6 +163,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " }}}
 
 " Environment {{{
+  " vimdoc-ja：日本語版ヘルプ
+  NeoBundle 'vim-jp/vimdoc-ja'
+
   " vimproc：vimで非同期処理
   NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
@@ -178,6 +181,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'Shougo/unite-outline'
   NeoBundle 'tacroe/unite-mark'
+  NeoBundle 'Shougo/unite-help'
 
   " vimshell：vim内で使えるshell
   NeoBundle 'Shougo/vimshell'
