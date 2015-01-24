@@ -35,6 +35,8 @@ nnoremap S :set<Space>cpt=H<CR>:hbsearch<Space>
 nnoremap t :set<Space>cpt=slt<CR>:tabopen<Space>
 nnoremap o :set<Space>cpt=slt<CR>:open<Space>
 
+nnoremap ,s :source ~/.vimperatorrc<CR>
+
 set hintchars=ighfjdksla
 
 " デフォルトのヒント派手すぎ＞＜
