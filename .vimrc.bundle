@@ -81,9 +81,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-fugitive：vimからgit操作をできるようにする
   NeoBundle 'tpope/vim-fugitive'
 
-  " gitv：vimからgitk的なことをやる
-  NeoBundle 'gregsexton/gitv'
-
   " committia.vim：gitコミットログサポート
   NeoBundle 'rhysd/committia.vim'
 
@@ -136,12 +133,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " recognize_charcode：文字エンコーディングを自動判別
   NeoBundle 'banyan/recognize_charcode.vim'
-
-  " vim-altr：気持ちを読み取ってファイルを開く
-  NeoBundle 'kana/vim-altr'
-
-  " gist-vim：Gistsをvimから使う
-  NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 
   " vim-quickhl：キーワードをハイライトする
   NeoBundle 't9md/vim-quickhl'

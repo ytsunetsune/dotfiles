@@ -8,15 +8,6 @@ map R <Plug>(operator-replace)
 " Gundo：Undo履歴を追える (need python support)
 nnoremap <F3> :GundoToggle<CR>
 
-" vim-altr：気持ちを読み取ってファイルを開く
-nnoremap <F2>  <Plug>(altr-forward)
-
-" gist-vim：Gistsをvimから使う
-let g:gist_clip_command = 'xclip -selection clipboard'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-let g:gist_show_privates = 1
-
 " jedi-vim：python開発
 let g:jedi#auto_initialization = 1
 let g:jedi#popup_on_dot = 0
