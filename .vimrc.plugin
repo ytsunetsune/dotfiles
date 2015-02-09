@@ -73,9 +73,9 @@ nnoremap <silent> ,iel :VimShellInteractive jskrbeusgl<CR>
 nnoremap <silent> ,ipy :VimShellInteractive python<CR>
 
 " Unite.vim：統合UI
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files -start-insert file/async<CR>
 nnoremap <silent> ,uF :<C-u>Unite neomru/file<CR>
-nnoremap <silent> ,un :<C-u>Unite file/new <CR>
+nnoremap <silent> ,un :<C-u>Unite -start-insert file/new <CR>
 nnoremap <silent> ,ud :<C-u>Unite directory<CR>
 nnoremap <silent> ,uD :<C-u>Unite neomru/directory <CR>
 nnoremap <silent> ,uo :<C-u>Unite outline<CR>
@@ -85,7 +85,7 @@ nnoremap <silent> ,uU :<C-u>UniteWithBufferDir -buffer-name=files buffer neomru/
 nnoremap <silent> ,um :<C-u>Unite mark<CR>
 nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
 nnoremap <silent> ,ut :<C-u>Unite tweetvim<CR>
-nnoremap <silent> ,uj :<C-u>Unite junkfile -no-quit<CR>
+nnoremap <silent> ,uj :<C-u>Unite -start-insert junkfile -no-quit<CR>
 
 augroup unite_openclose
   autocmd!
@@ -143,4 +143,5 @@ nnoremap // :Migemo<CR>
 
 " junkfile.vim：使い捨てのファイルを作る
 let g:junkfile#directory="~/junk"
+nnoremap <silent> ,jk :JunkfileOpen<CR>
 
