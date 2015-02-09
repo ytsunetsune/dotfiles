@@ -20,4 +20,6 @@
 [difftool]
 	prompt = false
 [push]
-	default = matching
+	default = current
+[http]
+	sslVerify = false
