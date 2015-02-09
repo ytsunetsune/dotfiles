@@ -145,6 +145,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-migemo：migemo
   NeoBundle 'haya14busa/vim-migemo'
+
+  " junkfile.vim：使い捨てのファイルを作る
+  NeoBundle 'Shougo/junkfile.vim'
 " }}}
 
 " ColorScheme{{{

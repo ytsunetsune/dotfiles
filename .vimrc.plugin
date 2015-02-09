@@ -85,6 +85,7 @@ nnoremap <silent> ,uU :<C-u>UniteWithBufferDir -buffer-name=files buffer neomru/
 nnoremap <silent> ,um :<C-u>Unite mark<CR>
 nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
 nnoremap <silent> ,ut :<C-u>Unite tweetvim<CR>
+nnoremap <silent> ,uj :<C-u>Unite junkfile -no-quit<CR>
 
 augroup unite_openclose
   autocmd!
@@ -139,3 +140,7 @@ augroup END
 
 " vim-migemo：migemo
 nnoremap // :Migemo<CR>
+
+" junkfile.vim：使い捨てのファイルを作る
+let g:junkfile#directory="~/junk"
+
