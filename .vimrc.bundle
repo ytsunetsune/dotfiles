@@ -58,9 +58,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " Gundo：Undo履歴を追える (need python support)
   NeoBundle 'Gundo'
 
-  " abolish.vim：強化版置換コマンドSubvert
-  NeoBundle 'tpope/vim-abolish'
-
   " speeddating-vim：C-a, C-xの対象を拡張
   NeoBundle 'tpope/vim-speeddating'
 " }}}
@@ -123,6 +120,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " incsearch.vim：検索を便利に
   NeoBundle 'haya14busa/incsearch.vim'
+
+  " vim-asterisk：*検索を便利に
+  NeoBundle 'haya14busa/vim-asterisk'
 
   " lightline：ステータスラインをかっこ良くする
   NeoBundle 'itchyny/lightline.vim'

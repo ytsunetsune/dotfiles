@@ -131,6 +131,12 @@ nmap # <Plug>(incsearch-nohl-#)<Plug>(anzu-sharp-with-echo)
 nmap g* <Plug>(incsearch-nohl-g*)<Plug>(anzu-star-with-echo)
 nmap g# <Plug>(incsearch-nohl-g#)<Plug>(anzu-sharp-with-echo)
 
+" vim-asterisk：*検索を便利に
+map *  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+map g* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+map #  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+map g# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+
 " previm：markdownなどのプレビュー
 let g:previm_enable_realtime = 1
 augroup PrevimSettings
