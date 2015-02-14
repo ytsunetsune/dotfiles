@@ -147,6 +147,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " junkfile.vim：使い捨てのファイルを作る
   NeoBundle 'Shougo/junkfile.vim'
+
+  " clever-f：f検索を便利に
+  NeoBundle 'rhysd/clever-f.vim'
 " }}}
 
 " ColorScheme{{{

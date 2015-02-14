@@ -151,3 +151,6 @@ nnoremap // :Migemo<CR>
 let g:junkfile#directory="~/junk"
 nnoremap <silent> ,jk :JunkfileOpen<CR>
 
+" clever-f：f検索を便利に
+let g:clever_f_smart_case=1
+let g:clever_f_use_migemo=1
