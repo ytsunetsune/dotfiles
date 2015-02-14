@@ -66,15 +66,14 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " }}}
 
 " Completion {{{
-  " 補完 neocomplcache.vim : 究極のVim的補完環境
-  "NeoBundle 'Shougo/neocomplcache'
+  " neocomplete.vim : 究極のVim的補完環境
+  NeoBundle 'Shougo/neocomplete'
 
   " neocomplcacheのsinpet補完
-  "NeoBundle 'Shougo/neosnippet.git'
+  NeoBundle 'Shougo/neosnippet.git'
 
   " various langueages snippets
-  "NeoBundle 'honza/vim-snippets'
-  "NeoBundle 'Shougo/neosnippet-snippets'
+  NeoBundle 'Shougo/neosnippet-snippets'
 " }}}
 
 " Programming {{{

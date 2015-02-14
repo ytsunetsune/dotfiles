@@ -31,5 +31,5 @@ nnoremap q: :
 nnoremap <ESC><ESC> :nohl<CR>
 
 " ファイルタイプ判定をon
-filetype plugin on
+filetype plugin indent on
 

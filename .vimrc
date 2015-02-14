@@ -21,5 +21,6 @@ source ~/dotfiles/.vimrc.lightline
 source ~/dotfiles/.vimrc.file
 " 補完設定
 source ~/dotfiles/.vimrc.completion
+source ~/dotfiles/.vimrc.neocomplete
 
 syntax on
