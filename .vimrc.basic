@@ -26,8 +26,8 @@ if has('persistent_undo')
 endif
 
 inoremap <silent> jj <C-[>
-nnoremap : q:a
-nnoremap q: :
+"nnoremap : q:a
+"nnoremap q: :
 nnoremap <ESC><ESC> :nohl<CR>
 
 " ファイルタイプ判定をon
