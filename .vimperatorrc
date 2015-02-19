@@ -4,6 +4,7 @@ source ~/.vimperator/vimppm/vimppm/plugin/vimppm.js
 vimppm 'migemo-find.js'
 vimppm 'migemo_completion.js'
 vimppm 'migemo_hint.js'
+vimppm 'stella.js'
 
 qmark g https://www.google.co.jp/
 qmark m https://mail.google.com/
@@ -35,6 +36,8 @@ nnoremap e :set<Space>cpt=s<CR>:tabopen<Space>weblio<Space>
 nnoremap S :set<Space>cpt=H<CR>:hbsearch<Space>
 nnoremap t :set<Space>cpt=slt<CR>:tabopen<Space>
 nnoremap o :set<Space>cpt=slt<CR>:open<Space>
+
+nnoremap ,p :stplay<CR>
 
 nnoremap ,s :source ~/.vimperatorrc<CR>
 
