@@ -66,6 +66,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-grammarous：文法チェッカ
   NeoBundle 'rhysd/vim-grammarous'
+
+  " vim-rengbang：連番入力
+  NeoBundle 'deris/vim-rengbang'
 " }}}
 
 " Completion {{{
