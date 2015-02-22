@@ -21,6 +21,7 @@ vmap ib <Plug>(textobj-multiblock-i)
 
 " committia.vim：gitコミットログサポート
 let g:committia_hooks = {}
+let g:committia_open_only_vim_starting = 1
 function! g:committia_hooks.edit_open(info)
   setlocal spell
   " if nocommit message, start with insert mode

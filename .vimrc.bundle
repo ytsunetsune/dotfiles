@@ -87,7 +87,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tpope/vim-fugitive'
 
   " committia.vim：gitコミットログサポート
-  NeoBundle 'rhysd/committia.vim'
+  "NeoBundle 'rhysd/committia.vim'
 
   " vim-slime：vim上のテキストをscreen/tmuxセッションに送る
   NeoBundle 'jpalardy/vim-slime'
