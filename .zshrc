@@ -24,7 +24,7 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 PROMPT2="> "
 SPROMPT="%r is correct? [n,y,a,e]: "
-RPROMPT='[`rprompt-git-current-branch`%F{cyan}%~%f]'
+RPROMPT='[`rprompt-git-current-branch`%F{cyan}%~%f] %*'
 RPROMPT2="%K{green}%_%k"
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
