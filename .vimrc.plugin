@@ -157,3 +157,12 @@ let g:clever_f_smart_case = 1
 let g:clever_f_use_migemo = 1
 let g:clever_f_fix_key_direction = 1
 let g:clever_f_chars_match_any_signs = ';'
+
+" yankround.vim：副作用のないYankRing
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+

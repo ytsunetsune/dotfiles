@@ -162,6 +162,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " ShowMarks：マークを表示する
   NeoBundle 'ShowMarks'
+
+  " yankround.vim：副作用のないYankRing
+  NeoBundle 'LeafCage/yankround.vim'
 " }}}
 
 " ColorScheme{{{
