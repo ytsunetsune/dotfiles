@@ -159,6 +159,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " clever-f：f検索を便利に
   NeoBundle 'rhysd/clever-f.vim'
+
+  " ShowMarks：マークを表示する
+  NeoBundle 'ShowMarks'
 " }}}
 
 " ColorScheme{{{
