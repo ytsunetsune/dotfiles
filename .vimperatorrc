@@ -32,6 +32,8 @@ imap <C-b> <Left>
 
 map <C-c> :echo Yank!<CR>Y
 
+map <C-h> <NOP>
+
 nnoremap s :set<Space>cpt=s<CR>:tabopen<Space>google<Space>
 nnoremap e :set<Space>cpt=s<CR>:tabopen<Space>weblio<Space>
 nnoremap S :set<Space>cpt=H<CR>:hbsearch<Space>
