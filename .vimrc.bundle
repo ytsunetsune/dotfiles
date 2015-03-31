@@ -80,6 +80,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " various langueages snippets
   NeoBundle 'Shougo/neosnippet-snippets'
+
+  " neco-look：英語の補完
+  NeoBundle 'ujihisa/neco-look'
 " }}}
 
 " Programming {{{

@@ -52,3 +52,8 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 let s:my_snippet = '~/.vim/snippet/'
 let g:neosnippet#snippets_directory = s:my_snippet
 
+" neco-look：英語の補完
+let g:neocomplcache_text_mode_filetypes = {
+      \  'tex': 1,
+      \  'plaintex': 1,
+      \}
