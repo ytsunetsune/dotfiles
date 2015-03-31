@@ -53,7 +53,7 @@ let s:my_snippet = '~/.vim/snippet/'
 let g:neosnippet#snippets_directory = s:my_snippet
 
 " neco-look：英語の補完
-let g:neocomplcache_text_mode_filetypes = {
+let g:neocomplete#text_mode_filetypes = {
       \  'tex': 1,
       \  'plaintex': 1,
       \}
