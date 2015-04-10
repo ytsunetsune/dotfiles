@@ -15,6 +15,7 @@ qmark q http://qiita.com/
 qmark w http://mizuuchi.lab.tuat.ac.jp/pukiwiki/
 qmark r https://mizuuchi.lab.tuat.ac.jp/gitbucket/
 qmark s https://mizuuchilab.slack.com/messages
+qmark t https://trello.com/
 
 map j 4<C-e>
 map k 4<C-y>
