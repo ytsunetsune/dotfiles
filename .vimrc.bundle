@@ -119,9 +119,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-pukiwiki-syntax：pukiwikiのシンタックスハイライト
   NeoBundle 'ytsunetsune/vim-pukiwiki-syntax'
 
-  " vim-niji：lisp系の言語でかっこを色付けする
-  NeoBundle 'amdt/vim-niji'
-
   " unite-outline-euslisp：euslispの定義文をアウトライン化
   NeoBundle 'ytsunetsune/unite-outline-euslisp'
 " }}}
