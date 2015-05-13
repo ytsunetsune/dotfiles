@@ -275,6 +275,7 @@ else
 fi
 alias vp=vimpager
 alias emacs='emacs -nw'
+alias zrn='noglob zmv -W'
 
 function agvim () {
 vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
