@@ -30,6 +30,9 @@ inoremap <silent> jj <C-[>
 "nnoremap q: :
 nnoremap <ESC><ESC> :nohl<CR>
 
+" 保存時にsudo権限で無理やり保存
+cnoremap w!! w !sudo tee > /dev/null %<CR>
+
 " ファイルタイプ判定をon
 filetype plugin indent on
 
