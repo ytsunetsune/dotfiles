@@ -86,6 +86,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " }}}
 
 " Programming {{{
+  " vim-quickrun：プログラムをすぐ実行できる
+  NeoBundle 'thinca/vim-quickrun'
+
   " vim-fugitive：vimからgit操作をできるようにする
   NeoBundle 'tpope/vim-fugitive'
 
@@ -121,6 +124,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " unite-outline-euslisp：euslispの定義文をアウトライン化
   NeoBundle 'ytsunetsune/unite-outline-euslisp'
+
+  " vim-filetype-haskell：Haskellのシンタックス
+  NeoBundle 'kana/vim-filetype-haskell'
+
+  " ghc-mod.vim：型を調べる
+  NeoBundle 'eagletmt/ghcmod-vim'
+
+  " neco-ghc：Haskellの補完
+  NeoBundle 'ujihisa/neco-ghc'
 " }}}
 
 " Utility {{{
