@@ -33,6 +33,18 @@ nnoremap <ESC><ESC> :nohl<CR>
 " 保存時にsudo権限で無理やり保存
 cnoremap w!! w !sudo tee > /dev/null %<CR>
 
+" 保存先のディレクトリがなければ確認の上作成する
+augroup vimrc-auto-mkdir  " \{\{\{
+  autocmd!
+  autocmd BufWritePre * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
+  function! s:auto_mkdir(dir, force)  " \{\{\{
+    if !isdirectory(a:dir) && (a:force ||
+    \    input(printf('"%s" does not exist. Create? [y/N]', a:dir)) =~? '^y\%[es]$')
+      call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+    endif
+  endfunction  " \}\}\}
+augroup END  " \}\}\}
+
 " ファイルタイプ判定をon
 filetype plugin indent on
 
