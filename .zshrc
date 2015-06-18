@@ -207,6 +207,12 @@ esac
 alias open.='open .'
 alias cp='cp -ip'
 alias mv='mv -i'
+
+function cdls ()
+{
+    \cd "$@" && ls
+}
+
 # global aliases
 alias -g G='| grep'
 alias -g L='| vimpager'
