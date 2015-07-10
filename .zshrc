@@ -175,6 +175,13 @@ alias -g L="|& $PAGER"
 alias -g WC="| wc"
 alias -g LC="| wc -l"
 alias -g Z="| tail"
+if which xsel >/dev/null 2>&1 ; then
+    # Linux
+    alias -g C='| xsel --input --clipboard'
+elif which putclip >/dev/null 2>&1 ; then
+    # Cygwin
+    alias -g C='| putclip'
+fi
 # 以下は.bashrcと共用
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
