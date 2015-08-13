@@ -151,30 +151,20 @@ setopt brace_ccl
 #setopt NO_flow_control
 ## コマンドラインでも # 以降をコメントと見なす
 #setopt interactive_comments
-# PAGER
-if type lv > /dev/null 2>&1; then
-    ## lvを優先する。
-    export PAGER="lv"
-else
-    ## lvがなかったらlessを使う。
-    export PAGER="less"
-fi
-if [ "$PAGER" = "lv" ]; then
-    ## -c: ANSIエスケープシーケンスの色付けなどを有効にする。
-    ## -l: 1行が長くと折り返されていても1行として扱う。
-    ## （コピーしたときに余計な改行を入れない。）
-    export LV="-c -l"
-else
-    ## lvがなくてもlvでページャーを起動する。
-    alias lv="$PAGER"
-fi
 # global aliases
 alias -g T="| tee"
 alias -g G="| grep"
-alias -g L="|& $PAGER"
 alias -g WC="| wc"
 alias -g LC="| wc -l"
+alias -g H='| head'
 alias -g Z="| tail"
+alias -g CL="| column -t"
+alias -g L='| less'
+alias -g LV='| lv'
+alias -g VP='| vimpager'
+alias -g S='| sort'
+alias -g X='| xargs'
+alias -g P='| peco'
 if which xsel >/dev/null 2>&1 ; then
     # Linux
     alias -g C='| xsel --input --clipboard'
@@ -220,15 +210,6 @@ function cdls ()
     \cd "$@" && ls
 }
 
-# global aliases
-alias -g G='| grep'
-alias -g L='| vimpager'
-alias -g H='| head'
-alias -g T='| tail'
-alias -g S='| sort'
-alias -g W='| wc'
-alias -g X='| xargs'
-alias -g P='| peco'
 # jokey git alias
 alias gtat='git status'
 alias gdiff='git diff'
@@ -244,8 +225,8 @@ alias gpush='git push'
 alias ggrep='git grep -ie'
 alias gstash='git stash'
 alias gstashp='git stash pop'
-alias ggraph='git graph'
-alias ggraphall='git graphall'
+alias gg='git graph'
+alias gga='git graphall'
 # git svn alias
 alias gsreb='git svn rebase'
 alias gsdco='git svn dcommit'
@@ -305,6 +286,8 @@ if [[ -f ~/.nvm/nvm.sh; ]]; then
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
     nvm use stable
 fi
+
+[[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
 
 if (which zprof > /dev/null); then
     zprof | less
