@@ -277,6 +277,10 @@ vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 
 function todo() { ag -i todo: $@ ;}
 
+function glogselect() {
+git log --oneline $1 | peco | cut -d" " -f1
+}
+
 if [[ -f ~/.zshrc.plugin; ]]; then
     source ~/.zshrc.plugin
 fi
