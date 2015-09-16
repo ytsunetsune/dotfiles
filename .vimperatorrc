@@ -1,9 +1,9 @@
 source ~/.vimperator/vimppm/vimppm/plugin/vimppm.js
 
 " plugins
-vimppm 'migemo-find.js'
-vimppm 'migemo_completion.js'
-vimppm 'migemo_hint.js'
+"vimppm 'migemo-find.js'
+"vimppm 'migemo_completion.js'
+"vimppm 'migemo_hint.js'
 vimppm 'stella.js'
 
 qmark g https://www.google.co.jp/
@@ -48,6 +48,7 @@ nnoremap ,p :stplay<CR>
 nnoremap ,s :source ~/.vimperatorrc<CR>
 
 set hintchars=ighfjdksla
+"set hintmatching=custom
 
 " デフォルトのヒント派手すぎ＞＜
 hi Hint font-family: Ricty; font-size: 21px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #33cccc;
