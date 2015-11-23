@@ -107,6 +107,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
         \   "unix": "pip install jedi",
         \ }}
 
+  " vim-autopep8：python用フォーマッタ
+  NeoBundleLazy 'tell-k/vim-autopep8', {
+        \ "autoload": {
+        \   "filetypes": ["python", "python3", "djangohtml"],
+        \ },
+        \ "build": {
+        \   "unix": "pip install pep8 autopep8",
+        \ }}
+
+
   " clang-format：clang-formatを使ってC系のコードを整形する
   NeoBundleLazy 'rhysd/vim-clang-format', {
         \ "autoload": {
