@@ -17,7 +17,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Edit {{{
   " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
-  NeoBundle 'scrooloose/nerdcommenter.git' 
+  NeoBundle 'scrooloose/nerdcommenter.git'
 
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'tpope/vim-surround'
@@ -55,9 +55,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vim-easy-align：整形
   NeoBundle 'junegunn/vim-easy-align'
 
-  " alignta：整形
-  NeoBundle 'h1mesuke/vim-alignta'
-
   " Gundo：Undo履歴を追える (need python support)
   NeoBundle 'Gundo'
 
@@ -69,6 +66,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " vim-rengbang：連番入力
   NeoBundle 'deris/vim-rengbang'
+
+  " vim-table-mode：markdownなどのtable入力環境
+  NeoBundleLazy 'dhruvasagar/vim-table-mode', {
+        \ "autoload": {
+        \   "filetypes": ["mkd", "markdown", "text"],
+        \ }}
 " }}}
 
 " Completion {{{
@@ -85,15 +88,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'ujihisa/neco-look'
 " }}}
 
-" Programming {{{
+" Programming {{
   " vim-quickrun：プログラムをすぐ実行できる
   NeoBundle 'thinca/vim-quickrun'
 
   " vim-fugitive：vimからgit操作をできるようにする
   NeoBundle 'tpope/vim-fugitive'
-
-  " committia.vim：gitコミットログサポート
-  "NeoBundle 'rhysd/committia.vim'
 
   " vim-slime：vim上のテキストをscreen/tmuxセッションに送る
   NeoBundle 'jpalardy/vim-slime'
@@ -178,12 +178,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " junkfile.vim：使い捨てのファイルを作る
   NeoBundle 'Shougo/junkfile.vim'
-
-  " clever-f：f検索を便利に
-  "NeoBundle 'rhysd/clever-f.vim'
-
-  " ShowMarks：マークを表示する
-  NeoBundle 'ShowMarks'
 
   " yankround.vim：副作用のないYankRing
   NeoBundle 'LeafCage/yankround.vim'
