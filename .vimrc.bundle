@@ -88,7 +88,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'ujihisa/neco-look'
 " }}}
 
-" Programming {{
+" Programming {{{
   " vim-quickrun：プログラムをすぐ実行できる
   NeoBundle 'thinca/vim-quickrun'
 
@@ -181,6 +181,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " yankround.vim：副作用のないYankRing
   NeoBundle 'LeafCage/yankround.vim'
+
+  " clever-f：f検索を便利に
+  NeoBundle 'rhysd/clever-f.vim'
 " }}}
 
 " ColorScheme{{{
@@ -215,6 +218,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " dispatch.vim：非同期処理
   NeoBundle 'tpope/vim-dispatch'
+" }}}
+
+" Dictionary {{{
+  " dicwin-vim：ローカルの英語辞書
+  NeoBundle 'koron/dicwin-vim'
 " }}}
 
 " TweetVim {{{
