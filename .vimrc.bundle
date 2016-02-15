@@ -44,7 +44,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'saihoooooooo/vim-textobj-space'
 
   " vim-textobj-line：行全体をtext-objectに
-  NeoBundle 'kana/vim-textobj-line'
+  "NeoBundle 'kana/vim-textobj-line'
 
   " vim-textobj-between：任意の文字で囲まれた範囲をtext-objectに
   NeoBundle 'thinca/vim-textobj-between'
