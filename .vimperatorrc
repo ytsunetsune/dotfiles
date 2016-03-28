@@ -15,7 +15,7 @@ qmark q http://qiita.com/
 qmark w http://mizuuchi.lab.tuat.ac.jp/pukiwiki/
 qmark k http://mizuuchi.lab.tuat.ac.jp/pukiwiki/index.php?研究会(meetings)/定例研究会(weekly)
 qmark r https://mizuuchi.lab.tuat.ac.jp/gitbucket/
-qmark s https://mizuuchilab.slack.com/messages
+qmark s https://kytsunetsune.slack.com/messages
 qmark t https://trello.com/
 
 map j 4<C-e>
