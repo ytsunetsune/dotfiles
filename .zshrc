@@ -233,10 +233,6 @@ alias gsdco='git svn dcommit'
 alias gslog='git svn log'
 alias gsclo='git svn clone'
 alias gsfet='git svn fetch'
-# screen alias
-alias sc='screen'
-# OMake alias
-alias omakep='omake -P --verbose'
 # retter settings
 export EDITOR=vim
 
@@ -250,49 +246,22 @@ zle -N show_buffer_stack
 setopt noflowcontrol
 bindkey '^Q' show_buffer_stack
 
-
-if [[ -f ~/.my-settings; ]]; then
-    . ~/.my-settings;
-fi
-
-alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
-alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-character-map.png "[$?] $(alert_helper) finished."'
-
 # agの結果を色付けを有効にしてlessに通す
 alias al='ag --pager "less -R"'
 
-# vimpager
-if type vimpager > /dev/null 2>&1; then
-    export PAGER=vimpager
-else
-    export PAGER=less
-fi
-alias vp=vimpager
 alias emacs='emacs -nw'
 alias zrn='noglob zmv -W'
-
-function agvim () {
-vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
-}
-
-function todo() { ag -i todo: $@ ;}
-
-function glogselect() {
-git log --oneline $1 | peco | cut -d" " -f1
-}
 
 if [[ -f ~/.zshrc.plugin; ]]; then
     source ~/.zshrc.plugin
 fi
 
-if [[ -f ~/.nvm/nvm.sh; ]]; then
-    export NVM_DIR="/home/tsuneoka/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    nvm use stable
-fi
-
-[[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
-
 if (which zprof > /dev/null); then
     zprof | less
 fi
+
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+
+alias g=git

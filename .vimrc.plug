@@ -1,0 +1,70 @@
+if has('vim_starting')
+  set rtp+=~/.vim/plugged/vim-plug
+  if !isdirectory(expand('~/.vim/plugged/vim-plug'))
+    echo 'install vim-plug...'
+    call system('mkdir -p ~/.vim/plugged/vim-plug')
+    call system('git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug/autoload')
+  end
+endif
+
+call plug#begin('~/.vim/plugged')
+  Plug 'junegunn/vim-plug',
+        \ {'dir': '~/.vim/plugged/vim-plug/autoload'}
+
+  " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
+  "Plug 'scrooloose/nerdcommenter'
+
+  " surround.vim : テキストを括弧で囲む／削除する
+  Plug 'tpope/vim-surround'
+
+  " repeat.vim：surround.vimなどを"."で繰り返し出来るようにする
+  Plug 'tpope/vim-repeat'
+
+  " vim-operator-user : 簡単にoperatorを定義できるようにする
+  Plug 'kana/vim-operator-user'
+
+  " operator-replace : yankしたものでreplaceする
+  Plug 'kana/vim-operator-replace'
+
+  " textobj-user : 簡単にVimエディタのテキストオブジェクトをつくれる
+  Plug 'textobj-user'
+
+  " vim-textobj-entire : buffer全体をtext-objectに
+  Plug 'textobj-entire'
+
+  " vim-textobj-multiblock：カッコ系をまとめてib, abで扱う
+  Plug 'osyo-manga/vim-textobj-multiblock'
+
+  " vim-textobj-space：空白文字をtext-objectに
+  Plug 'saihoooooooo/vim-textobj-space'
+
+  " vim-textobj-line：行全体をtext-objectに
+  "Plug 'kana/vim-textobj-line'
+
+  " vim-textobj-between：任意の文字で囲まれた範囲をtext-objectに
+  Plug 'thinca/vim-textobj-between'
+
+  " vim-textobj-indent：同階層のインデント部分をtext-objectに
+  Plug 'kana/vim-textobj-indent'
+
+  " speeddating-vim：C-a, C-xの対象を拡張
+  Plug 'tpope/vim-speeddating'
+
+  " jedi-vim：python開発
+  Plug 'davidhalter/jedi-vim'
+
+  " lightline：ステータスラインをかっこ良くする
+  Plug 'itchyny/lightline.vim'
+
+  " recognize_charcode：文字エンコーディングを自動判別
+  Plug 'banyan/recognize_charcode.vim'
+
+  " yankround.vim：副作用のないYankRing
+  Plug 'LeafCage/yankround.vim'
+
+  " colorscheme
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'tomasr/molokai'
+  Plug 'w0ng/vim-hybrid'
+
+call plug#end()

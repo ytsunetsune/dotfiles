@@ -4,10 +4,10 @@ if has('win32') || has('win64')
     source $VIMRUNTIME/delmenu.vim
     set langmenu=ja_jp.utf-8
     source $VIMRUNTIME/menu.vim
-    set guifont=Ricty:h12
+    set guifont=Ricty Diminished:h12
 else
     " Windows以外の場合の処理
-    set guifont=Ricty\ 12
+    set guifont=Ricty\ Diminished\ 12
 endif
 
 colorscheme solarized
